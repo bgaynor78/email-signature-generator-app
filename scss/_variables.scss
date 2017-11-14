@@ -1,0 +1,66 @@
+@import "./functions";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+// The font size/line-height set on the root html element.
+$base-font-size:                  16px;
+$base-line-height:                24px;
+
+// Base unit for sizing (fonts, etc)
+$base-unit:                       'rem';
+
+// The default font declarations
+$base-font-family:                "Open Sans", sans-serif;
+$heading-font-family:             "Open Sans", sans-serif;
+$icon-font:                       "icomoon";
+
+// The font sizes for h1-h6.
+$h1-font-size:                    3    * $base-font-size;
+$h2-font-size:                    2.5  * $base-font-size;
+$h3-font-size:                    2.17 * $base-font-size;
+$h4-font-size:                    2    * $base-font-size;
+$h5-font-size:                    1.83 * $base-font-size;
+$h6-font-size:                    1.67 * $base-font-size;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 2rem;
+
+
+// COLORS
+$white:                           #ffffff !default;
+$dark-gray:                       #333333 !default;
+$medium-gray:                     #333333 + #666666 !default;
+$light-gray:                      #CCCCCC !default;
+$lightest-gray:                   #EEEEEE !default;
+$text-muted:                      #f8f9fa !default;
+
+$simple-blue:                     #408bca !default;
+$simple-dark-blue:                #005684 !default;
+
+$form-text-input-padding-x:       .9375rem;
+$form-text-input-padding-y:       .625rem;
+
+//GRID
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+$grid-spacing: 3%;

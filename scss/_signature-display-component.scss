@@ -1,0 +1,12 @@
+@import './variables';
+
+.signature-display-component {
+
+  .instructions {
+    margin: calc(25% - 40px) 0;
+  }
+
+  button {
+    margin-bottom: 1.75rem;
+  }
+}

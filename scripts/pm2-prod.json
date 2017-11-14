@@ -1,0 +1,26 @@
+{
+  "name"             : "email-signature-generator",
+  "cwd"              : "/var/www/email-signature-generator",
+  "args"             : ["--toto=heya coco", "-d", "1"],
+  "script"           : "app.js",
+  "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+  "error_file"       : "/var/www/email-signature-generator/log/email-signature-generator.stderr.log",
+  "out_file"         : "/var/www/email-signature-generator/log/email-signature-generator.stdout.log",
+  "instances"        : 1,
+  "min_uptime"       : "200s",
+  "max_restarts"     : 10,
+  "max_memory_restart": "256M",
+  "cron_restart"     : "1 0 * * *",
+  "watch"            : true,
+  "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules","log","scripts"],
+  "merge_logs"       : true,
+  "exec_interpreter" : "node",
+  "exec_mode"        : "fork",
+  "autorestart"      : true,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "env_production"  : {
+    "NODE_ENV": "production"
+  }
+}

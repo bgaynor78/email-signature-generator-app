@@ -1,0 +1,27 @@
+.button {
+  background-color: $lightest-gray;
+  border: 1px solid $light-gray;
+  @include prefix(border-radius, 2px, webkit moz);
+  padding: .35rem .85rem;
+  color: $dark-gray;
+  @include prefix(transition, all .15s linear, webkit moz);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 .5rem 0 0;
+
+  &:hover {
+    background-color: $medium-gray;
+    color: $lightest-gray;
+  }
+}
+.button-primary {
+  background-color: $simple-blue;
+  border-color: $simple-dark-blue;
+  color: #fff;
+
+  &:hover {
+    background-color: $simple-dark-blue;
+    border-color: $simple-dark-blue;
+  }
+}

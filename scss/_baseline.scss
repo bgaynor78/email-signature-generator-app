@@ -1,0 +1,105 @@
+@import "./variables";
+@import "./mixins";
+
+
+html {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: $base-font-family;
+  color: #3A4145;
+  text-rendering: geometricPrecision;
+}
+::-moz-selection {
+  background: #D6EDFF;
+}
+::selection {
+  background: #D6EDFF;
+}
+h1, h2, h3,
+h4, h5, h6 {
+  color: #2E2E2E;
+  line-height: 1.15em;
+  margin: 0 0 0.4em 0;
+  font-family: $heading-font-family;
+  text-rendering: geometricPrecision;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: $h1-font-size;
+  letter-spacing: -2px;
+  text-indent: -3px;
+}
+h2 {
+  font-size: $h2-font-size;
+  letter-spacing: -1px;
+}
+h3 {
+  font-size: $h3-font-size;
+  letter-spacing: -0.6px;
+}
+h4 {
+  font-size: $h4-font-size;
+}
+h5 {
+  font-size: $h5-font-size;
+}
+h6 {
+  font-size: $h6-font-size;
+}
+a {
+  color: $simple-blue;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $simple-dark-blue;
+  }
+}
+p {
+  margin: 0 0 1.75em 0;
+  text-rendering: geometricPrecision;
+  font-weight: 300;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $lightest-gray;
+  margin: 3.2em 0;
+  padding: 0;
+}
+
+blockquote {
+  @include prefix(box-sizing, border-box, moz);
+  margin: 1.75em 0 1.75em -2.2em;
+  padding: 0 0 0 1.75em;
+  border-left: #4A4A4A 0.4em solid;
+
+  p {
+    margin: 0.8em 0;
+    font-style: italic;
+  }
+
+  small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: $light-gray;
+
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+
+  cite {
+    font-weight: 700;
+
+    a {
+      font-weight: normal;
+    }
+  }
+}

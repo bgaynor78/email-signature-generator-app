@@ -1,0 +1,39 @@
+@import "./variables";
+@import "./mixins";
+
+.form-group {
+
+  .form-group-input {
+    padding: $form-text-input-padding-y $form-text-input-padding-x;
+    width: 100%;
+    border: 1px solid $light-gray;
+    @include prefix(border-radius, 2px, webkit moz);
+    margin: .5rem 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+
+    &:disabled {
+      background-color: $lightest-gray;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      outline: $simple-blue auto 5px;
+      border-color: $simple-blue;
+    }
+  }
+
+  &.has-error {
+    .form-group-input {
+      border-color: #f00;
+    }
+
+    .help-text {
+      color: #f00;
+    }
+  }
+
+  &.buttons {
+    margin-top: 1rem;
+  }
+}
