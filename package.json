@@ -4,7 +4,7 @@
   "description": "Small self-service utility app for email signature generation.",
   "repository": "https://bitbucket.org/adaptiverx/rxflex-pharmacist-search.git",
   "scripts": {
-    "start": "npm build && node src/app.js",
+    "start": "npm run-script build && node src/app.js",
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "dev-start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.config.js"
   },
