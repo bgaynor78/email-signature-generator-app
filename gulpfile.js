@@ -8,6 +8,8 @@ const del = require('del');
 //THE BELOW SEQUENCE IS USED TO CLEAN, BUILD AND DEPLOY
 // THE PROJECT TO THE SERVER. NOT NEEDED FOR LOCAL DEVELOPMENT
 
+
+// NOT NEEDED FOR HEROKU DEPLOYS
 // gulp.task('build', function(callback) {
 //   runSequence('build-copy',
 //     'build-deploy',
@@ -22,6 +24,9 @@ gulp.task('build-clean', function() {
   });
 });
 
+
+
+// NOT USED FOR HEROKU DEPLOYS
 // gulp.task('build-copy', function(){
 //   return gulp.src(['./scripts/pm2-prod.json','./package.json', './index.html', './app.js', './server.js'])
 //     .pipe(gulp.dest('./dist/'))
