@@ -1,1 +1,0 @@
-# email-signature-generator-app
